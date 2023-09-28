@@ -14,6 +14,11 @@
     crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="style.css" />
   <title>Home</title>
+  <style>
+    main {
+      min-height: calc(100vh - 5.5rem);
+    }
+  </style>
 </head>
 
 <body>
@@ -74,27 +79,23 @@
       <!--END SIDEBAR VERTICAL-->
 
       <!--MAIN-->
-      <div class="col-12 mb-5 col-md-9 offset-md-3 mainPage">
-        <div class="row">
-          <div class="col-9 col-lg-11 mainLinks d-none d-md-flex">
-            <a href="#">TRENDING</a>
-            <a href="#">PODCAST</a>
-            <a href="#">MOODS AND GENRES</a>
-            <a href="#">NEW RELEASES</a>
-            <a href="#">DISCOVER</a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-10">
-            <div id="searchResults">
-              <h2>Search Results</h2>
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 imgLinks py-3">
+      <main class="container p-5 d-flex flex-column">
+        <h1 id="album-title" class="text-white"></h1>
+        <div class="row flex-grow-1">
 
-              </div>
-            </div>
-          </div>
+          <section id="cover" class="col-12 col-md-4">
+            Album cover
+
+          </section>
+          <section id="tracklist" class="col-12 col-md-8">
+            Album tracklist
+          </section>
+
         </div>
-      </div>
+
+
+
+      </main>
     </div>
   </div>
   <!--END MAIN-->
@@ -138,6 +139,7 @@
   <!--END NAVBAR BOTTOM-->
 
   <script src="script.js"></script>
+  <script src="album.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
